@@ -1,0 +1,30 @@
+{
+  "pollIntervalSeconds": 60,
+  "stateFile": "state/tracker-state.json",
+  "notifyInitially": false,
+  "notify": {
+    "selfPing": {
+      "apiKeyEnv": "SELFPING_API_KEY"
+    }
+  },
+  "watches": [
+    {
+      "id": "math-345m",
+      "label": "Stats for Data Science",
+      "term": "202503",
+      "search": {
+        "subject": "MATH",
+        "courseNumber": "345M"
+      }
+    },
+    {
+      "id": "dsci-345m",
+      "label": "Stats for Data Science",
+      "term": "202503",
+      "search": {
+        "subject": "DSCI",
+        "courseNumber": "345M"
+      }
+    }
+  ]
+}

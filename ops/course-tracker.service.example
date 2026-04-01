@@ -1,0 +1,16 @@
+[Unit]
+Description=UO course tracker
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/home/ubuntu/course-tracker
+EnvironmentFile=/home/ubuntu/course-tracker/ops/course-tracker.env
+ExecStart=/usr/bin/env bun run src/index.ts
+Restart=always
+RestartSec=15
+
+[Install]
+WantedBy=multi-user.target
